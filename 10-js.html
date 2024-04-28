@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史人物对象示例</title>
+    <style>
+        #info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>拿破仑·波拿巴</h1>
+    <button id="showInfo">显示信息</button>
+    <div id="info">
+        <p><strong>名字: </strong><span id="name"></span></p>
+        <p><strong>称号: </strong><span id="title"></span></p>
+        <p><strong>成就: </strong><span id="achievement"></span></p>
+    </div>
+
+    <script>
+        // 创建一个代表拿破仑的对象
+        var napoleon = {
+            name: '拿破仑·波拿巴',
+            title: '法国皇帝',
+            achievement: '征服了大部分欧洲'
+        };
+
+        // 给按钮添加点击事件监听器
+        document.getElementById('showInfo').addEventListener('click', function() {
+            // 读取拿破仑对象的属性，并显示在页面上
+            document.getElementById('name').textContent = napoleon.name;
+            document.getElementById('title').textContent = napoleon.title;
+            document.getElementById('achievement').textContent = napoleon.achievement;
+        });
+    </script>
+
+</body>
+</html>
