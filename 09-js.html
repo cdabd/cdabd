@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>武侠人物生成器</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+#generate {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#character p {
+    margin: 10px 0;
+}
+        #character {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>武侠人物生成器</h1>
+    <button id="generate">生成人物</button>
+    <div id="character">
+        <p>姓名: <span id="name"></span></p>
+        <p>性别: <span id="gender"></span></p>
+        <p>门派: <span id="sect"></span></p>
+        <p>武功: <span id="skill"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('generate').addEventListener('click', function() {
+    // 随机生成姓名
+    var names = ['张无忌', '赵敏', '令狐冲', '任我行', '东方不败'];
+    var name = names[Math.floor(Math.random() * names.length)];
+
+    // 随机生成性别
+    var gender = Math.random() < 0.5 ? '男' : '女';
+
+    // 随机生成门派
+    var sects = ['少林派', '武当派', '峨眉派', '丐帮', '日月神教'];
+    var sect = sects[Math.floor(Math.random() * sects.length)];
+
+    // 随机生成武功
+    var skills = ['降龙十八掌', '独孤九剑', '太极拳', '六脉神剑', '吸星大法'];
+    var skill = skills[Math.floor(Math.random() * skills.length)];
+
+    // 将生成的属性显示在页面上
+    document.getElementById('name').textContent = name;
+    document.getElementById('gender').textContent = gender;
+    document.getElementById('sect').textContent = sect;
+    document.getElementById('skill').textContent = skill;
+});
+    </script>
+
+</body>
+</html>
